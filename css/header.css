@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Courier+Prime&family=Exo:wght@400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Exo;
+}
+
+.header {
+  background-color: #262626;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+nav ul {
+  display: flex;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.links-nav {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-family: Exo;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: 0.5s;
+  border-radius: 15px;
+}
+
+.links-nav:hover {
+  color: black;
+  background-color: #03fe70;
+}
+
+.menu-hamburguer {
+  cursor: pointer;
+  width: 30px;
+  display: none;
+}
+
+.menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+}
+
+.links-menu {
+  text-decoration: none;
+  margin-bottom: 40px;
+  color: white;
+  font-size: 30px;
+}
+
+.btn-fechar-menu {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  cursor: pointer;
+}
+
+/*//////////////////////// MEDIA QUERIES ////////////////////// */
+
+@media (max-width: 605px) {
+  .logo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .links-nav {
+    font-size: 13px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 453px) {
+  .logo {
+    display: none;
+  }
+
+  .links-nav {
+    display: none;
+  }
+
+  .header {
+    justify-content: center;
+  }
+
+  .menu-hamburguer {
+    display: block;
+  }
+}

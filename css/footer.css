@@ -1,0 +1,25 @@
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 15vh;
+  background-color: #222121;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a {
+  text-align: center;
+  color: #03FE70;
+}
+
+.developer {
+  margin-top: 15px;
+}
