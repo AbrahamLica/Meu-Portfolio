@@ -77,7 +77,7 @@ ul li {
   cursor: pointer;
 }
 
-/*//////////////////////// MEDIA QUERIES ////////////////////// */
+/*//////////////////////// MEDIA QUERIES WIDTH ////////////////////// */
 
 @media (max-width: 605px) {
   .logo {
@@ -106,5 +106,41 @@ ul li {
 
   .menu-hamburguer {
     display: block;
+  }
+}
+
+/*//////////////////////// MEDIA QUERIES HEIGHT ////////////////////// */
+
+@media (min-height: 1100px) {
+  .logo {
+    width: 330px;
+    /* height: 600px; */
+  }
+
+  .links-nav {
+    font-size: 30px;
+  }
+}
+
+@media (min-height: 1500px) {
+  .header {
+    height: 12vh;
+  }
+}
+
+@media (min-height: 1700px) {
+  .logo {
+    width: 400px;
+    /* height: 600px; */
+  }
+
+  .links-nav {
+    font-size: 33px;
+  }
+}
+
+@media (min-height: 2100px) {
+  .header {
+    height: 10vh;
   }
 }
