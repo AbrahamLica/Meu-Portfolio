@@ -9,15 +9,32 @@
 
 .header {
   background-color: #262626;
-  height: 15vh;
+  height: 18vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 60px 25px;
+}
+
+.container-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-logo h2 {
+  color: white;
+}
+
+.container-logo p {
+  color: #03fe70;
 }
 
 .logo {
   overflow-x: hidden;
   overflow-y: hidden;
+  width: 50px;
 }
 
 nav ul {
@@ -79,6 +96,23 @@ ul li {
 
 /*//////////////////////// MEDIA QUERIES WIDTH ////////////////////// */
 
+@media (max-width: 631px) {
+  .container-logo {
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  .container-logo h2 {
+    font-size: 20px;
+  }
+
+  .container-logo p {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 605px) {
   .logo {
     width: 150px;
@@ -113,8 +147,15 @@ ul li {
 
 @media (min-height: 1100px) {
   .logo {
-    width: 330px;
-    /* height: 600px; */
+    width: 85px;
+  }
+
+  .container-logo h2 {
+    font-size: 30px;
+  }
+
+  .container-logo p {
+    font-size: 28px;
   }
 
   .links-nav {
@@ -124,18 +165,25 @@ ul li {
 
 @media (min-height: 1500px) {
   .header {
-    height: 12vh;
+    height: 14vh;
   }
 }
 
 @media (min-height: 1700px) {
   .logo {
-    width: 400px;
-    /* height: 600px; */
+    width: 100px;
   }
 
   .links-nav {
-    font-size: 33px;
+    font-size: 32px;
+  }
+
+  .container-logo h2 {
+    font-size: 32px;
+  }
+
+  .container-logo p {
+    font-size: 30 px;
   }
 }
 
