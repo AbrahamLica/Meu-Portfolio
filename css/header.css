@@ -171,19 +171,19 @@ ul li {
 
 @media (min-height: 1700px) {
   .logo {
-    width: 100px;
+    width: 85px;
   }
 
   .links-nav {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .container-logo h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .container-logo p {
-    font-size: 30 px;
+    font-size: 26px;
   }
 }
 
