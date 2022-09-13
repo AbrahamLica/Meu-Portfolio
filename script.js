@@ -18,6 +18,8 @@ const btnMenu = document.querySelector(".menu-hamburguer")
 const btnFechaMenu = document.querySelector(".btn-fechar-menu")
 const menu = document.querySelector(".menu")
 const menus = document.querySelectorAll(".links-menu")
+const txtEmail = document.querySelector(".txt-email")
+const btnEmail = document.querySelector(".btn-email")
 
 
 async function animarScroll() {
@@ -240,8 +242,27 @@ menus.forEach(function(i) {
   })
 })
 
+function mostraEmail() {
+ if (txtEmail.classList.contains('desliza') == true) {
+    txtEmail.classList.remove('desliza')
+    txtEmail.classList.add('remove-desliza')
+    setTimeout(() => {
+      txtEmail.style.display = 'none'
+    }, 500);
+   } else if (txtEmail.classList.contains('desliza') == true && txtEmail.classList.contains('remove-desliza') == true) {
+    txtEmail.classList.remove('desliza')
+    txtEmail.classList.remove('remove-desliza')
+ } else if (txtEmail.classList.contains('remove-desliza') == true) {
+  txtEmail.style.display = 'block'
+    txtEmail.classList.remove('remove-desliza')
+    txtEmail.classList.add('desliza')
+ } else {
+  txtEmail.classList.add('desliza')
+ }
+}
 
 ////////////////////////////////////////////////////////////
 window.addEventListener('scroll', animarScroll)
 btnMenu.addEventListener('click', abreMenu)
 btnFechaMenu.addEventListener('click', fechaMenu)
+btnEmail.addEventListener('click', mostraEmail)

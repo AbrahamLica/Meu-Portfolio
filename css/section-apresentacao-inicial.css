@@ -42,9 +42,17 @@
   width: 160px;
 }
 
-.btn:hover {
-  background-color: rgba(57, 56, 56, 1);
-  text-shadow: none;
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 110px;
+  margin-right: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-shadow: 2px 2px 1px black;
+  transition: 0.4s;
 }
 
 .btn img {

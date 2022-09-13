@@ -1,128 +1,165 @@
+/* ////////////// ANIMAÇÕES EMAIL /////////////////// */
 
+.desliza {
+  display: block;
+  animation: desliza 0.5s linear forwards;
+}
+
+.remove-desliza {
+  display: block;
+  animation: removeDesliza 0.5s linear forwards;
+}
+
+@keyframes desliza {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(50px);
+    background-color: #03fe70;
+  }
+}
+
+@keyframes removeDesliza {
+  0% {
+    transform: translateX(50px);
+    background-color: #03fe70;
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* ///////////// ANIMAÇÕES BARRA DE PROGRESSO //////////////////////// */
+
+@keyframes grow100 {
+  0% {
+    transform: scaleX(0);
+  }
+
+  50% {
+    transform: scaleX(0.5);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes grow85 {
+  0% {
+    transform: scaleX(0);
+  }
+
+  50% {
+    transform: scaleX(0.4);
+  }
+
+  100% {
+    transform: scaleX(0.8);
+  }
+}
+
+@keyframes grow65 {
+  0% {
+    transform: scaleX(0);
+  }
+
+  50% {
+    transform: scaleX(0.3);
+  }
+
+  100% {
+    transform: scaleX(0.65);
+  }
+}
+
+@keyframes growinfinite {
+  0% {
+    transform: scaleX(0);
+  }
+
+  50% {
+    transform: scaleX(0.5);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
 
 .progress-bar-100::after {
-    background-color: rgb(23, 210, 13);
-    content: '';
-    position: absolute;
-    mix-blend-mode: multiply;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    transform: scaleX(1);
-    transform-origin: center left;
-    animation-name: grow100;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-  }
-  
-  .progress-bar-85::after {
-    background-color: rgb(23, 210, 13);
-    content: '';
-    position: absolute;
-    mix-blend-mode: multiply;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    transform: scaleX(0.85);
-    transform-origin: center left;
-    animation-name: grow85;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-  }
-  
-  .progress-bar-65::after {
-    background-color: rgb(23, 210, 13);
-    content: '';
-    position: absolute;
-    mix-blend-mode: multiply;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    transform: scaleX(0.65);
-    transform-origin: center left;
-    animation-name: grow65;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-  }
-  
-  .progress-bar-infinite::after {
-    background-color: rgb(23, 210, 13);
-    content: '';
-    position: absolute;
-    mix-blend-mode: multiply;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    transform: scaleX(1);
-    transform-origin: center left;
-    animation-name: growinfinite;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
-  
-  /*////////////////////// ANIMAÇÕES//////////////////////// */
-  @keyframes grow100 {
-    0% {
-      transform: scaleX(0);
-    }
-  
-    50% {
-      transform: scaleX(0.5);
-    }
-  
-    100% {
-      transform: scaleX(1);
-    }
-  }
-  
-  @keyframes grow85 {
-    0% {
-      transform: scaleX(0);
-    }
-  
-    50% {
-      transform: scaleX(0.4);
-    }
-  
-    100% {
-      transform: scaleX(0.8);
-    }
-  }
-  
-  @keyframes grow65 {
-    0% {
-      transform: scaleX(0);
-    }
-  
-    50% {
-      transform: scaleX(0.3);
-    }
-  
-    100% {
-      transform: scaleX(0.65);
-    }
-  }
-  
-  @keyframes growinfinite {
-    0% {
-      transform: scaleX(0);
-    }
-  
-    50% {
-      transform: scaleX(0.5);
-    }
-  
-    100% {
-      transform: scaleX(1);
-    }
-  }
+  background-color: rgb(23, 210, 13);
+  content: "";
+  position: absolute;
+  mix-blend-mode: multiply;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: scaleX(1);
+  transform-origin: center left;
+  animation-name: grow100;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
 
-  /* ////////////////////////   ANIMAÇÃO DO SCROLL /////////////////////// */
+.progress-bar-85::after {
+  background-color: rgb(23, 210, 13);
+  content: "";
+  position: absolute;
+  mix-blend-mode: multiply;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: scaleX(0.85);
+  transform-origin: center left;
+  animation-name: grow85;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+.progress-bar-65::after {
+  background-color: rgb(23, 210, 13);
+  content: "";
+  position: absolute;
+  mix-blend-mode: multiply;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: scaleX(0.65);
+  transform-origin: center left;
+  animation-name: grow65;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+.progress-bar-infinite::after {
+  background-color: rgb(23, 210, 13);
+  content: "";
+  position: absolute;
+  mix-blend-mode: multiply;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: scaleX(1);
+  transform-origin: center left;
+  animation-name: growinfinite;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/*////////////////////// ANIMAÇÕES//////////////////////// */
+  
+
+  /* //////////////////   ANIMAÇÃO DO SCROLL /////////////////// */
+
 [data-anime] {
   opacity: 0;
   transition: 0.5s;
@@ -141,25 +178,25 @@
   transform: translate3d(0px, 0px, 0px);
 }
 
-/* ///////////////////Keyframes/////////////////// */
+/* /////////// ANIMAÇÃO PISCA PISCA MAQUINA DE ESCREVER //////////// */
+
 @keyframes pisca {
   0% {
     opacity: 1;
   }
 
   50% {
-    opacity: 0
+    opacity: 0;
   }
 
   100% {
-    opacity: 1
+    opacity: 1;
   }
 }
 
-  .conteudo-apresentacao-inicial h2::after {
-    content: '|';
-    margin-left: 5px;
-    opacity: 1;
-    animation: pisca .7s infinite;
-  }
-  
+.conteudo-apresentacao-inicial h2::after {
+  content: "|";
+  margin-left: 5px;
+  opacity: 1;
+  animation: pisca 0.7s infinite;
+}

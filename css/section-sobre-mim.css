@@ -46,6 +46,45 @@
   border-radius: 10px;
 }
 
+.btn-email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 110px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+  margin-top: 40px;
+}
+
+.containter-btn-email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containter-btn-email img {
+  height: 30px;
+  margin-right: 5px;
+}
+
+.containter-btn-email p {
+  color: white;
+  font-size: 16px;
+}
+
+.txt-email {
+  display: none;
+  position: absolute;
+  color: black;
+  font-weight: bold;
+  margin-left: 240px;
+  z-index: 1;
+  border-radius: 15px;
+  padding: 3px 10px;
+}
+
 /*/////////////////// MEDIA QUERIES //////////////*/
 
 @media (max-width: 1090px) {
@@ -72,66 +111,80 @@
     width: 400px;
   }
 
-  @media (max-width: 850px) {
-    .abraham {
-      width: 270px;
-    }
+  .btn-email {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 850px) {
+  .abraham {
+    width: 270px;
+  }
+}
+
+@media (max-width: 810px) {
+  .p {
+    font-size: 15px;
   }
 
-  @media (max-width: 810px) {
-    .p {
-      font-size: 15px;
-    }
+  .container-p {
+    width: 400px;
+  }
+}
 
-    .container-p {
-      width: 400px;
-    }
+@media (max-width: 690px) {
+  .container-sobre {
+    padding: 0px 0px;
   }
 
-  @media (max-width: 690px) {
-    .container-sobre {
-      padding: 0px 0px;
-    }
-
-    .container-sobre {
-      flex-direction: column;
-    }
-
-    .container-img-sobre {
-      margin-top: 40px;
-    }
-
-    .container-p {
-      width: 500px;
-    }
+  .container-sobre {
+    flex-direction: column;
   }
 
-  @media (max-width: 520px) {
-    .container-p {
-      width: 400px;
-    }
+  .container-img-sobre {
+    margin-top: 40px;
   }
 
-  @media (max-width: 410px) {
-    .container-p {
-      width: 350px;
-    }
+  .container-p {
+    width: 500px;
+  }
+}
 
-    .p {
-      line-height: 25px;
-      font-size: 15px;
-    }
+@media (max-width: 520px) {
+  .container-p {
+    width: 400px;
+  }
+}
+
+@media (max-width: 410px) {
+  .container-p {
+    width: 350px;
   }
 
-  @media (max-width: 350px) {
-    .container-p {
-      width: 300px;
-    }
+  .p {
+    line-height: 25px;
+    font-size: 15px;
+  }
 
-    .p {
-      line-height: 25px;
-      font-size: 15px;
-      text-align: left;
-    }
+  .txt-email {
+    font-size: 12px;
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 350px) {
+  .container-p {
+    width: 300px;
+  }
+
+  .p {
+    line-height: 25px;
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .txt-email {
+    font-size: 11px;
+    margin-left: 155px;
   }
 }
