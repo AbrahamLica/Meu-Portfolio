@@ -94,7 +94,29 @@ ul li {
   cursor: pointer;
 }
 
-/*//////////////////////// MEDIA QUERIES WIDTH ////////////////////// */
+/*//////////////////////// MEDIA QUERIES  ////////////////////// */
+
+@media (max-width: 1080px) {
+  .header {
+    height: 8vh;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .container-logo h2 {
+    font-size: 30px;
+  }
+
+  .container-logo p {
+    font-size: 20px;
+  }
+
+  .links-nav {
+    font-size: 30px;
+  }
+}
 
 @media (max-width: 660px) {
   .logo {
@@ -185,55 +207,5 @@ ul li {
 
   .menu-hamburguer {
     display: block;
-  }
-}
-
-/*//////////////////////// MEDIA QUERIES HEIGHT ////////////////////// */
-
-@media (min-height: 1100px) {
-  .logo {
-    width: 85px;
-  }
-
-  .container-logo h2 {
-    font-size: 30px;
-  }
-
-  .container-logo p {
-    font-size: 28px;
-  }
-
-  .links-nav {
-    font-size: 30px;
-  }
-}
-
-@media (min-height: 1500px) {
-  .header {
-    height: 14vh;
-  }
-}
-
-@media (min-height: 1700px) {
-  .logo {
-    width: 85px;
-  }
-
-  .links-nav {
-    font-size: 30px;
-  }
-
-  .container-logo h2 {
-    font-size: 28px;
-  }
-
-  .container-logo p {
-    font-size: 26px;
-  }
-}
-
-@media (min-height: 2100px) {
-  .header {
-    height: 10vh;
   }
 }

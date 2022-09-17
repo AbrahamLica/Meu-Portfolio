@@ -23,28 +23,14 @@ footer a {
   margin-top: 15px;
 }
 
-/*//////////////////////// MEDIA QUERIES HEIGHT ////////////////////// */
+/* //////////////////////// MEDIA QUERIES ////////////////////// */
 
-@media (min-height: 1000px) {
-  footer p {
-    font-size: 30px;
+@media (min-height: 1080px) {
+  footer {
+    height: 10vh;
   }
-}
 
-@media (min-height: 1300px) {
   footer p {
     font-size: 35px;
-  }
-}
-
-@media (min-height: 1700px) {
-  footer p {
-    font-size: 40px;
-  }
-}
-
-@media (min-height: 1900px) {
-  footer p {
-    font-size: 44px;
   }
 }
