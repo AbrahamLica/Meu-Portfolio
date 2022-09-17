@@ -54,6 +54,7 @@ ul li {
   padding: 5px 10px;
   transition: 0.5s;
   border-radius: 15px;
+  font-size: 20px;
 }
 
 .links-nav:hover {
@@ -98,11 +99,7 @@ ul li {
 
 @media (max-width: 1080px) {
   .header {
-    height: 8vh;
-  }
-
-  .logo {
-    width: 90px;
+    height: 10vh;
   }
 
   .container-logo h2 {
@@ -118,6 +115,34 @@ ul li {
   }
 }
 
+@media (max-width: 930px) {
+  .container-logo h2 {
+    font-size: 25px;
+  }
+
+  .container-logo p {
+    font-size: 15px;
+  }
+
+  .links-nav {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  .container-logo h2 {
+    font-size: 20px;
+  }
+
+  .container-logo p {
+    font-size: 10px;
+  }
+
+  .links-nav {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 660px) {
   .logo {
     width: 40px;
@@ -129,20 +154,6 @@ ul li {
 
   .container-logo p {
     font-size: 13px;
-  }
-}
-
-@media (max-width: 631px) {
-  .logo {
-    width: 30px;
-  }
-
-  .container-logo h2 {
-    font-size: 14px;
-  }
-
-  .container-logo p {
-    font-size: 12px;
   }
 }
 

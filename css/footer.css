@@ -3,11 +3,13 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 15vh;
   background-color: #222121;
+  padding: 15px;
 }
 
 footer p {
+  font-size: 25px;
+  line-height: 40px;
   text-align: center;
   color: white;
   text-decoration: none;
@@ -15,22 +17,5 @@ footer p {
 }
 
 footer a {
-  text-align: center;
   color: #03fe70;
-}
-
-.developer {
-  margin-top: 15px;
-}
-
-/* //////////////////////// MEDIA QUERIES ////////////////////// */
-
-@media (min-height: 1080px) {
-  footer {
-    height: 10vh;
-  }
-
-  footer p {
-    font-size: 35px;
-  }
 }

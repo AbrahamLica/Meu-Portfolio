@@ -229,16 +229,19 @@ btnFechar.forEach(function(i) {
 
 function abreMenu() {
   menu.style.display = 'flex'
+  document.body.style.overflow = 'hidden'
 }
 
 function fechaMenu() {
   menu.style.display = 'none'
+  document.body.style.overflow = 'initial'
 }
 
 menus.forEach(function(i) {
   i.addEventListener('click', function(t) {
     console.log(t.target)
     menu.style.display = 'none'
+    document.body.style.overflow = 'initial'
   })
 })
 

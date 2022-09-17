@@ -58,6 +58,10 @@
   margin-top: 40px;
 }
 
+.btn-email:hover {
+  background-color: #2e2d2d;
+}
+
 .containter-btn-email {
   display: flex;
   align-items: center;
