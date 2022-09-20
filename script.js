@@ -228,12 +228,20 @@ btnFechar.forEach(function(i) {
 })
 
 function abreMenu() {
+  menu.style.opacity = 0
   menu.style.display = 'flex'
   document.body.style.overflow = 'hidden'
+      setTimeout(function(){
+        menu.style.opacity = 1
+      }, 100)
+  
 }
 
 function fechaMenu() {
-  menu.style.display = 'none'
+  menu.style.opacity = 0
+  setTimeout(function(){
+    menu.style.display = 'none'
+  }, 400)
   document.body.style.overflow = 'initial'
 }
 

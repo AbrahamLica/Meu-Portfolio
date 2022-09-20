@@ -7,6 +7,16 @@
   font-family: Exo;
 }
 
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
 .header {
   background-color: #262626;
   height: 18vh;
@@ -73,12 +83,13 @@ ul li {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: black;
   z-index: 1;
   position: absolute;
   top: 0;
+  transition: 0.4s;
 }
 
 .links-menu {
