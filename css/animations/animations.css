@@ -1,16 +1,16 @@
 /* ////////////// ANIMAÇÕES EMAIL /////////////////// */
 
-.desliza {
+.slide {
   display: block;
-  animation: desliza 0.5s linear forwards;
+  animation: slide 0.5s linear forwards;
 }
 
-.remove-desliza {
+.remove-slide {
   display: block;
-  animation: removeDesliza 0.5s linear forwards;
+  animation: removeslide 0.5s linear forwards;
 }
 
-@keyframes desliza {
+@keyframes slide {
   0% {
     transform: translateX(0px);
   }
@@ -21,7 +21,7 @@
   }
 }
 
-@keyframes removeDesliza {
+@keyframes removeslide {
   0% {
     transform: translateX(50px);
     background-color: #03fe70;
@@ -194,7 +194,7 @@
   }
 }
 
-.conteudo-apresentacao-inicial h2::after {
+.content-initial-presentation h2::after {
   content: "|";
   margin-left: 5px;
   opacity: 1;
