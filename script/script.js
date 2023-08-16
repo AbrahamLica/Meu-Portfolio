@@ -1,22 +1,37 @@
 // ---------------------------------- DOM -------------------------------------------------//
+//DOM General
 const target = document.querySelectorAll("[data-anime]");
+
+//DOM Header
 const linksNav = document.querySelectorAll(".links-nav");
-const title = document.querySelector(".initial-presentation > h2");
-const containerInfoLanguage = document.querySelector(".containerinfoLanguage");
-const btnInfo = document.querySelectorAll(".btn-info");
-const btnClose = document.querySelectorAll(".btn-close");
-const btnMenu = document.querySelector(".menu-hamburguer");
-const btncloseMenuHamburguer = document.querySelector(".btn-close-menu");
 const menu = document.querySelector(".menu");
 const menus = document.querySelectorAll(".links-menu");
+const btnMenu = document.querySelector(".menu-hamburguer");
+const btncloseMenuHamburguer = document.querySelector(".btn-close-menu");
+
+//DOM Home
 const txtEmail = document.querySelector(".txt-email");
 const btnEmail = document.querySelector(".btn-email");
+const title = document.querySelector(".initial-presentation > h2");
+
+//DOM Skills
+const containerInfoLanguage = document.querySelector(".containerinfoLanguage");
 const containerSkill = document.querySelector(".container-skill");
 const containerSkills = document.querySelector(".container-skills");
 const containerSkillAll = document.querySelectorAll(".container-skill");
 const toRemoveAfterCloneSkills = document.querySelector(
   ".toRemoveAfterCloneSkills"
 );
+const btnInfo = document.querySelectorAll(".btn-info");
+const btnClose = document.querySelectorAll(".btn-close");
+
+//DOM projects
+const toRemoveAfterCloneProject = document.querySelector(
+  ".toRemoveAfterCloneProjects"
+);
+const project = document.querySelector(".project");
+const projectsAll = document.querySelectorAll(".project");
+const containerProjects = document.querySelector(".container-projects");
 
 //////////////////////////////// Data //////////////////////////////////
 
@@ -98,7 +113,7 @@ const dataProjects = [
     name: "Jogo da Memória",
     src: "img/imgs/jogo-da-memoria.png",
     info: "Um simples e divertido jogo da memória criado por mim, usando <span class='span'>HTML5</span>, <span class='span'>CSS3</span> e <span class='span'>Javascript</span> puro.",
-    href: "",
+    href: "https://abrahamlica.github.io/Jogo-da-Memoria/",
     progressBarClass: "progress-bar-100",
     progressBarText: "100%",
   },
@@ -110,8 +125,73 @@ const dataProjects = [
     progressBarClass: "progress-bar-100",
     progressBarText: "100%",
   },
-  
+  {
+    name: "Book Finder",
+    src: "img/imgs/book-finder.png",
+    info: "Um buscado de livros, feito com JavaScript puro, que consome uma API do <span class='span' ><a href='https://books.google.com.br/' target='_blank' >Google Books</a >.</span >",
+    href: "https://abrahamlica.github.io/Projeto-book-finder/",
+    progressBarClass: "progress-bar-100",
+    progressBarText: "100%",
+  },
 ];
+
+//////////////////////////////// fill sections on load //////////////////////////////////
+
+function fillSections() {
+  //FILL SKILLS SECTION
+  for (let i = 0; i < dataSkills.length; i++) {
+    //origem da clonagem
+    var newSkill = containerSkill.cloneNode(true);
+    // destino da clonagem
+    var add = containerSkills.append(newSkill);
+
+    containerSkill.style.display = "flex";
+
+    containerSkillAll.forEach((e) => {
+      e.children[0].children[0].setAttribute("src", dataSkills[i].src); //muda a imagem da linguagem
+      e.children[1].children[0].children[0].children[0].innerHTML =
+        dataSkills[i].name; //mudar o nome
+      e.children[1].children[0].children[2].children[0].children[0].innerHTML =
+        dataSkills[i].name; //mudar o nome
+      e.children[1].children[0].children[2].children[1].innerHTML =
+        dataSkills[i].info; //mudar a info
+      e.children[1].children[1].classList.add(dataSkills[i].progressBarClass); //mudar a classe da bar
+      e.children[1].children[1].children[0].innerHTML =
+        dataSkills[i].progressBarText; //mudar o texto da bar
+
+      e.children[1].children[0].children[1].setAttribute(
+        "data",
+        dataSkills[i].name
+      ); //insere atributo data
+      e.children[1].children[0].children[2].setAttribute(
+        "data",
+        dataSkills[i].name
+      ); //muda a imagem da linguagem
+    });
+  }
+
+  //FILL PROJECTS SECTION
+  for (let i = 0; i < dataProjects.length; i++) {
+    //origem da clonagem
+    var newProject = project.cloneNode(true);
+    // destino da clonagem
+    var add = containerProjects.append(newProject);
+
+    project.style.display = "flex";
+
+    projectsAll.forEach((e) => {
+      e.children[0].setAttribute("href", dataProjects[i].href); //muda href
+      e.children[0].children[0].setAttribute("src", dataProjects[i].src); //muda src
+      e.children[1].classList.add(dataProjects[i].progressBarClass) //muda class progressbar
+      e.children[1].children[0].innerHTML = dataProjects[i].progressBarText; //muda porcentagem progressbar
+      e.children[2].setAttribute("href", dataProjects[i].href); //muda href
+      e.children[2].innerHTML = dataProjects[i].name //muda nome do projeto
+      e.children[3].children[0].innerHTML = dataProjects[i].info; //muda descrição
+    });
+  }
+  toRemoveAfterCloneProject.children[0].style.display = "none";
+  toRemoveAfterCloneSkills.children[0].style.display = "none";
+}
 
 //////////////////////////////// Scroll functions //////////////////////////////////
 
@@ -150,76 +230,6 @@ function smoothScroll(event) {
 }
 
 animateScroll();
-
-//////////////////////////////// fill sections on load //////////////////////////////////
-
-function fillSections() {
-  //FILL SKILLS SECTION
-  for (let i = 0; i < dataSkills.length; i++) {
-    //origem da clonagem
-    var newSkill = containerSkill.cloneNode(true);
-    // destino da clonagem
-    var add = containerSkills.append(newSkill);
-
-    containerSkill.style.display = "flex";
-
-    containerSkillAll.forEach((e) => {
-      e.children[0].children[0].setAttribute("src", dataSkills[i].src); //muda a imagem da linguagem
-      e.children[1].children[0].children[0].children[0].innerHTML =
-        dataSkills[i].name; //mudar o nome
-      e.children[1].children[0].children[2].children[0].children[0].innerHTML =
-        dataSkills[i].name; //mudar o nome
-      e.children[1].children[0].children[2].children[1].innerHTML =
-        dataSkills[i].info; //mudar a info
-      e.children[1].children[1].classList.add(dataSkills[i].progressBarClass); //mudar a classe da bar
-      e.children[1].children[1].children[0].innerHTML =
-        dataSkills[i].progressBarText; //mudar o texto da bar
-
-      e.children[1].children[0].children[1].setAttribute(
-        "data",
-        dataSkills[i].name
-      ); //insere atributo data
-      e.children[1].children[0].children[2].setAttribute(
-        "data",
-        dataSkills[i].name
-      ); //muda a imagem da linguagem
-    });
-  }
-
-  //FILL PROJECTS SECTION
-  for (let i = 0; i < dataSkills.length; i++) {
-    //origem da clonagem
-    var newSkill = containerSkill.cloneNode(true);
-    // destino da clonagem
-    var add = containerSkills.append(newSkill);
-
-    containerSkill.style.display = "flex";
-
-    containerSkillAll.forEach((e) => {
-      e.children[0].children[0].setAttribute("src", dataSkills[i].src); //muda a imagem da linguagem
-      e.children[1].children[0].children[0].children[0].innerHTML =
-        dataSkills[i].name; //mudar o nome
-      e.children[1].children[0].children[2].children[0].children[0].innerHTML =
-        dataSkills[i].name; //mudar o nome
-      e.children[1].children[0].children[2].children[1].innerHTML =
-        dataSkills[i].info; //mudar a info
-      e.children[1].children[1].classList.add(dataSkills[i].progressBarClass); //mudar a classe da bar
-      e.children[1].children[1].children[0].innerHTML =
-        dataSkills[i].progressBarText; //mudar o texto da bar
-
-      e.children[1].children[0].children[1].setAttribute(
-        "data",
-        dataSkills[i].name
-      ); //insere atributo data
-      e.children[1].children[0].children[2].setAttribute(
-        "data",
-        dataSkills[i].name
-      ); //muda a imagem da linguagem
-    });
-  }
-
-  toRemoveAfterCloneSkills.children[0].style.display = "none";
-}
 
 //////////////////////////////// Others //////////////////////////////////
 
@@ -280,4 +290,3 @@ menus.forEach(function (i) {
     document.body.style.overflow = "initial";
   });
 });
-////////////////////////////////////////////////////////////
