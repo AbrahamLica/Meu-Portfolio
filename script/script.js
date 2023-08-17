@@ -65,16 +65,16 @@ const dataSkills = [
     progressBarText: "100%",
   },
   {
-    name: "Node.js",
-    src: "img/icons/node.png",
-    info: "Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execuçãode códigos JavaScript fora de um navegador web.",
-    progressBarClass: "progress-bar-infinite",
-    progressBarText: "Loading",
-  },
-  {
     name: "Typescript",
     src: "img/icons/typescript.png",
     info: "TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft. É um superconjunto sintático estrito de JavaScript e adiciona tipagem estática opcional à linguagem.",
+    progressBarClass: "progress-bar-100",
+    progressBarText: "100%",
+  },
+  {
+    name: "React.js",
+    src: "img/icons/react.png",
+    info: "O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web. É mantido pelo Facebook, Instagram, outras empresas e uma comunidade de desenvolvedores individuais.",
     progressBarClass: "progress-bar-100",
     progressBarText: "100%",
   },
@@ -86,11 +86,11 @@ const dataSkills = [
     progressBarText: "Loading",
   },
   {
-    name: "React.js",
-    src: "img/icons/react.png",
-    info: "O React é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web. É mantido pelo Facebook, Instagram, outras empresas e uma comunidade de desenvolvedores individuais.",
-    progressBarClass: "progress-bar-100",
-    progressBarText: "100%",
+    name: "Node.js",
+    src: "img/icons/node.png",
+    info: "Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execuçãode códigos JavaScript fora de um navegador web.",
+    progressBarClass: "progress-bar-infinite",
+    progressBarText: "Loading",
   },
   {
     name: "Vue.js",
@@ -155,7 +155,11 @@ function fillSections() {
         dataSkills[i].name; //mudar o nome
       e.children[1].children[0].children[2].children[1].innerHTML =
         dataSkills[i].info; //mudar a info
-      // e.children[1].children[1].classList.add(dataSkills[i].progressBarClass); //mudar a classe da bar
+      e.children[1].children[1].classList.add(dataSkills[i].progressBarClass); //mudar a classe da bar
+      console.log(
+        `no elemento ${dataSkills[i].name} foi adicionado a classe ${dataSkills[i].progressBarClass}`
+      );
+
       e.children[1].children[1].children[0].innerHTML =
         dataSkills[i].progressBarText; //mudar o texto da bar
 
