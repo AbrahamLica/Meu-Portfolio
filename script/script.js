@@ -155,7 +155,7 @@ function fillSections() {
         dataSkills[i].name; //mudar o nome
       e.children[1].children[0].children[2].children[1].innerHTML =
         dataSkills[i].info; //mudar a info
-      e.children[1].children[1].classList.add(dataSkills[i].progressBarClass); //mudar a classe da bar
+      // e.children[1].children[1].classList.add(dataSkills[i].progressBarClass); //mudar a classe da bar
       e.children[1].children[1].children[0].innerHTML =
         dataSkills[i].progressBarText; //mudar o texto da bar
 
@@ -182,10 +182,10 @@ function fillSections() {
     projectsAll.forEach((e) => {
       e.children[0].setAttribute("href", dataProjects[i].href); //muda href
       e.children[0].children[0].setAttribute("src", dataProjects[i].src); //muda src
-      e.children[1].classList.add(dataProjects[i].progressBarClass) //muda class progressbar
+      e.children[1].classList.add(dataProjects[i].progressBarClass); //muda class progressbar
       e.children[1].children[0].innerHTML = dataProjects[i].progressBarText; //muda porcentagem progressbar
       e.children[2].setAttribute("href", dataProjects[i].href); //muda href
-      e.children[2].innerHTML = dataProjects[i].name //muda nome do projeto
+      e.children[2].innerHTML = dataProjects[i].name; //muda nome do projeto
       e.children[3].children[0].innerHTML = dataProjects[i].info; //muda descrição
     });
   }
