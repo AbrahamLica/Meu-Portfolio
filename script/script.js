@@ -37,13 +37,6 @@ const containerProjects = document.querySelector(".container-projects");
 
 const dataSkills = [
   {
-    name: "HTML5",
-    src: "img/icons/html.png",
-    info: "HTML significa HiperText Markup Language, traduzindo ao português: Linguagem de Marcação de Hipertexto. O HTML é o componente básico da web, ele permite inserir o conteúdo e estabelecer a estrutura básica de um website.",
-    progressBarClass: "progress-bar-100",
-    progressBarText: "100%",
-  },
-  {
     name: "CSS3",
     src: "img/icons/css.png",
     info: "CSS é a sigla para Cascading Style Sheets, ou seja, Folhas de Estilo em Cascatas. É uma maneira de dar estilo ao código criado por linguagens como HTML, XML ou XHTML, por exemplo.",
@@ -79,9 +72,9 @@ const dataSkills = [
     progressBarText: "100%",
   },
   {
-    name: "Python",
-    src: "img/icons/python.png",
-    info: "Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte.",
+    name: "Vue.js",
+    src: "img/icons/vue.png",
+    info: "Vue.js é um framework JavaScript de código-aberto, focado no desenvolvimento de interfaces de usuário e aplicativos de página única.",
     progressBarClass: "progress-bar-infinite",
     progressBarText: "Loading",
   },
@@ -93,19 +86,26 @@ const dataSkills = [
     progressBarText: "Loading",
   },
   {
-    name: "Vue.js",
-    src: "img/icons/vue.png",
-    info: "Vue.js é um framework JavaScript de código-aberto, focado no desenvolvimento de interfaces de usuário e aplicativos de página única.",
+    name: "Python",
+    src: "img/icons/python.png",
+    info: "Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte.",
     progressBarClass: "progress-bar-infinite",
     progressBarText: "Loading",
   },
   {
-    name: "Vue.js",
-    src: "img/icons/vue.png",
-    info: "Vue.js é um framework JavaScript de código-aberto, focado no desenvolvimento de interfaces de usuário e aplicativos de página única.",
-    progressBarClass: "progress-bar-infinite",
-    progressBarText: "Loading",
+    name: "HTML5",
+    src: "img/icons/html.png",
+    info: "HTML significa HiperText Markup Language, traduzindo ao português: Linguagem de Marcação de Hipertexto. O HTML é o componente básico da web, ele permite inserir o conteúdo e estabelecer a estrutura básica de um website.",
+    progressBarClass: "progress-bar-100",
+    progressBarText: "100%",
   },
+  // {
+  //   name: "Vue.js",
+  //   src: "img/icons/vue.png",
+  //   info: "Vue.js é um framework JavaScript de código-aberto, focado no desenvolvimento de interfaces de usuário e aplicativos de página única.",
+  //   progressBarClass: "progress-bar-infinite",
+  //   progressBarText: "Loading",
+  // },
 ];
 
 const dataProjects = [
@@ -120,18 +120,18 @@ const dataProjects = [
   {
     name: "Book Finder",
     src: "img/imgs/book-finder.png",
-    info: "Um buscado de livros, feito com JavaScript puro, que consome uma API do <span class='span' ><a href='https://books.google.com.br/' target='_blank' >Google Books</a >.</span >",
+    info: "Um buscador de livros, feito com JavaScript puro, que consome uma API do <span class='span' ><a href='https://books.google.com.br/' target='_blank' >Google Books</a >.</span >",
     href: "https://abrahamlica.github.io/Projeto-book-finder/",
     progressBarClass: "progress-bar-100",
     progressBarText: "100%",
   },
   {
-    name: "Book Finder",
-    src: "img/imgs/book-finder.png",
-    info: "Um buscado de livros, feito com JavaScript puro, que consome uma API do <span class='span' ><a href='https://books.google.com.br/' target='_blank' >Google Books</a >.</span >",
-    href: "https://abrahamlica.github.io/Projeto-book-finder/",
-    progressBarClass: "progress-bar-100",
-    progressBarText: "100%",
+    name: "Meme Generator",
+    src: "img/imgs/meme-generator.png",
+    info: "Um <span class='span'>Gerador de memes</span>, feito na sua maior parte com JavaScript puro. Utilizei também a lib Konva.js(Lib de Canvas), para possibilitar a edição e manipulação das imagens. A página também consome uma API do <span class='span' ><a href='https://imgflip.com/api' target='_blank' >imgflip</a >.</span > para buscar as imagens dos memes.",
+    href: "https://abrahamlica.github.io/memeGenerator/",
+    progressBarClass: "progress-bar-infinite",
+    progressBarText: "60%",
   },
 ];
 
@@ -146,6 +146,34 @@ function fillSections() {
     var add = containerSkills.append(newSkill);
 
     containerSkill.style.display = "flex";
+    containerSkills.children[0].style.display = "flex";
+
+    containerSkills.children[0].children[0].children[0].setAttribute(
+      "src",
+      dataSkills[i].src
+    ); //muda a imagem da linguagem
+    containerSkills.children[0].children[1].children[0].children[0].children[0].innerHTML =
+      dataSkills[i].name; //mudar o nome
+    containerSkills.children[0].children[1].children[0].children[2].children[0].children[0].innerHTML =
+      dataSkills[i].name; //mudar o nome
+    containerSkills.children[0].children[1].children[0].children[2].children[1].innerHTML =
+      dataSkills[i].info; //mudar a info
+    containerSkills.children[0].children[1].children[1].classList.add(
+      dataSkills[i].progressBarClass
+    ); //mudar a classe da bar
+    containerSkills.children[0].children[1].children[1].classList.remove(
+      "progress-bar-infinite"
+    );
+    containerSkills.children[0].children[1].children[1].children[0].innerHTML =
+      dataSkills[i].progressBarText; //mudar o texto da bar
+    containerSkills.children[0].children[1].children[0].children[1].setAttribute(
+      "data",
+      dataSkills[i].name
+    ); //insere atributo data
+    containerSkills.children[0].children[1].children[0].children[2].setAttribute(
+      "data",
+      dataSkills[i].name
+    ); //muda a imagem da linguagem
 
     containerSkillAll.forEach((e) => {
       e.children[0].children[0].setAttribute("src", dataSkills[i].src); //muda a imagem da linguagem
@@ -156,13 +184,8 @@ function fillSections() {
       e.children[1].children[0].children[2].children[1].innerHTML =
         dataSkills[i].info; //mudar a info
       e.children[1].children[1].classList.add(dataSkills[i].progressBarClass); //mudar a classe da bar
-      console.log(
-        `no elemento ${dataSkills[i].name} foi adicionado a classe ${dataSkills[i].progressBarClass}`
-      );
-
       e.children[1].children[1].children[0].innerHTML =
         dataSkills[i].progressBarText; //mudar o texto da bar
-
       e.children[1].children[0].children[1].setAttribute(
         "data",
         dataSkills[i].name
@@ -182,6 +205,36 @@ function fillSections() {
     var add = containerProjects.append(newProject);
 
     project.style.display = "flex";
+
+    containerProjects.children[0].style.display = "flex";
+
+    containerProjects.children[0].children[0].setAttribute(
+      "href",
+      dataProjects[i].href
+    );
+    containerProjects.children[0].children[0].children[0].setAttribute(
+      "href",
+      dataProjects[i].href
+    );
+
+    containerProjects.children[0].children[0].children[0].setAttribute(
+      "src",
+      dataProjects[i].src
+    ); //muda src
+
+    containerProjects.children[0].children[1].classList.add(
+      dataProjects[i].progressBarClass
+    ); //muda class progressbar
+
+    containerProjects.children[0].children[1].children[0].innerHTML =
+      dataProjects[i].progressBarText; //muda porcentagem progressbar
+    containerProjects.children[0].children[2].setAttribute(
+      "href",
+      dataProjects[i].href
+    ); //muda href
+    containerProjects.children[0].children[2].innerHTML = dataProjects[i].name; //muda nome do projeto
+    containerProjects.children[0].children[3].children[0].innerHTML =
+      dataProjects[i].info; //muda descrição
 
     projectsAll.forEach((e) => {
       e.children[0].setAttribute("href", dataProjects[i].href); //muda href
