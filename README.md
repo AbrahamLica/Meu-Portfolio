@@ -16,7 +16,7 @@ Neste portfólio, você irá encontrar algumas informações importantes sobre m
 
 
 <h3>Screenshot</h3>
-<img src="/img/screenshot.png">
+<img src="/img/imgs/screenshot.png">
 
 
 <img src="/img/logo/meu-logo-branco.png" width='300px'>
