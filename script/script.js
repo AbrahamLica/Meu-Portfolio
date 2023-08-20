@@ -133,6 +133,14 @@ const dataProjects = [
     progressBarClass: "progress-bar-infinite",
     progressBarText: "60%",
   },
+  {
+    name: "Formulário Simples",
+    src: "img/imgs/formulario.png",
+    info: "Um <span class='span'>Formulário</span>, simples, porém com funcionalidades essenciais.",
+    href: 'https://abrahamlica.github.io/Projeto-formulario-simples/',
+    progressBarClass: "progress-bar-100",
+    progressBarText: "100%",
+  },
 ];
 
 //////////////////////////////// fill sections on load //////////////////////////////////
