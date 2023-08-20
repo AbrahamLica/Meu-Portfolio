@@ -1,14 +1,14 @@
 
-# Projeto Cordel
+# Me conheça melhor 😃
 
-Projeto desenvolvido no curso do Gustavo Guanabara, com o intuito de solidificar meu conhecimento em HTML5 e CSS3.
-
-
-## Referência
-
- - [Link da vídeo aula](https://www.youtube.com/watch?v=cz7AoKGcwlY) 👈
+Neste portfólio, você irá encontrar algumas informações importantes sobre mim, o que eu faço, com o que trabalho e também conseguirá ter acesso a alguns dos meus projetos já desenvolvidos.
 
 
+# Tecnologias usadas
+
+- HTML5
+- CSS3
+- Javascript
 
 ## Autor
 
@@ -16,7 +16,10 @@ Projeto desenvolvido no curso do Gustavo Guanabara, com o intuito de solidificar
 
 
 <h3>Screenshot</h3>
-<img src="/imagens/cordel.png">
+<img src="/img/screenshot.png">
 
 
-<img src="/imagens/meu-logo-branco.png" width='300px'>
+<img src="/img/logo/meu-logo-branco.png" width='300px'>
+
+
+
