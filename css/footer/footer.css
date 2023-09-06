@@ -5,6 +5,7 @@ footer {
   flex-direction: column;
   background-color: #222121;
   padding: 15px;
+  width: 100%;
 }
 
 footer p {
