@@ -99,16 +99,25 @@ const dataSkills = [
     progressBarClass: "progress-bar-100",
     progressBarText: "100%",
   },
-  // {
-  //   name: "Vue.js",
-  //   src: "img/icons/vue.png",
-  //   info: "Vue.js é um framework JavaScript de código-aberto, focado no desenvolvimento de interfaces de usuário e aplicativos de página única.",
-  //   progressBarClass: "progress-bar-infinite",
-  //   progressBarText: "Loading",
-  // },
 ];
 
 const dataProjects = [
+  {
+    name: "Formulário Simples",
+    src: "img/imgs/formulario.png",
+    info: "Um <span class='span'>Formulário</span>, simples, porém com funcionalidades essenciais.",
+    href: "https://abrahamlica.github.io/Projeto-formulario-simples/",
+    progressBarClass: "progress-bar-100",
+    progressBarText: "100%",
+  },
+  {
+    name: "Meu primeiro jogo",
+    src: "img/imgs/myFirstGame.png",
+    info: "Um <span class='span'>jogo</span>simples que criei utilizando Canvas.",
+    href: "https://abrahamlica.github.io/myFirstGame/",
+    progressBarClass: "progress-bar-100",
+    progressBarText: "100%",
+  },
   {
     name: "Jogo da Memória",
     src: "img/imgs/jogo-da-memoria.png",
@@ -126,20 +135,52 @@ const dataProjects = [
     progressBarText: "100%",
   },
   {
+    name: "Nerd Shop",
+    src: "img/imgs/nerdshop.png",
+    info: "Um <span class='span'>Ecommerce</span> totalmente front-end, com as opções de compra, adicionar ao carrinho, entre outros.",
+    href: "https://nerd-shop.vercel.app/",
+    progressBarClass: "progress-bar-100",
+    progressBarText: "100%",
+  },
+  {
+    name: "Sistema Cadastro de pessoas",
+    src: "img/imgs/crud.png",
+    info: "Um <span class='span'>CRUD</span> simples porém eficaz, criado usando React.js",
+    href: "https://sistema-cadastro-de-pessoas.vercel.app/",
+    progressBarClass: "progress-bar-100",
+    progressBarText: "100%",
+  },
+  {
+    name: "Smart Wallet",
+    src: "img/imgs/smartwallet.png",
+    info: "Um <span class='span'>Sistema de Finanças</span> com várias funcionalidades, visando o controle das suas finanças mensais e anuais.",
+    href: "https://smart-wallet-eight.vercel.app/",
+    progressBarClass: "progress-bar-100",
+    progressBarText: "100%",
+  },
+  {
+    name: "Movies Library",
+    src: "img/imgs/movieslibrary.png",
+    info: "<span class='span'>Base da dados de filmes</span> que utiliza a API do TMDB.",
+    href: "https://movies-database-tan.vercel.app/",
+    progressBarClass: "progress-bar-100",
+    progressBarText: "100%",
+  },
+  {
+    name: "Marvel Database",
+    src: "img/imgs/marveldatabase.png",
+    info: "<span class='span'>Base da dados da Marvel</span> que utiliza a API do Marvel.",
+    href: "https://movies-database-tan.vercel.app/",
+    progressBarClass: "progress-bar-100",
+    progressBarText: "100%",
+  },
+  {
     name: "Meme Generator",
     src: "img/imgs/meme-generator.png",
     info: "Um <span class='span'>Gerador de memes</span>, feito na sua maior parte com JavaScript puro. Utilizei também a lib Konva.js(Lib de Canvas), para possibilitar a edição e manipulação das imagens. A página também consome uma API do <span class='span' ><a href='https://imgflip.com/api' target='_blank' >imgflip</a >.</span > para buscar as imagens dos memes.",
     href: "https://abrahamlica.github.io/memeGenerator/",
     progressBarClass: "progress-bar-infinite",
     progressBarText: "60%",
-  },
-  {
-    name: "Formulário Simples",
-    src: "img/imgs/formulario.png",
-    info: "Um <span class='span'>Formulário</span>, simples, porém com funcionalidades essenciais.",
-    href: 'https://abrahamlica.github.io/Projeto-formulario-simples/',
-    progressBarClass: "progress-bar-100",
-    progressBarText: "100%",
   },
 ];
 
